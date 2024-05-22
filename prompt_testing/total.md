@@ -1,5 +1,14 @@
-Error! No patient data has been provided for reference.
-"**Step 1 - Identifying Top Three Risk Factors for Extubation**
+
+# Test01
+
+## Input
+| Data no | Gender           | Age                | Height              | SAPSII              | OASIS              | GCS                | SpO2              | FiO2               | MBP                 | VT                   | VE                   | HR                   | RR                 | PiMAX             | COPD               | PCO2              | Pred_XGB | Prob XGB (0)   | Prob XGB (1)   | Extubation Failure |
+|---------|------------------|--------------------|---------------------|---------------------|---------------------|--------------------|-------------------|--------------------|---------------------|----------------------|----------------------|----------------------|--------------------|-------------------|--------------------|-------------------|----------|----------------|----------------|---------------------|
+| 0       | female (0.8425931)| 74 (-0.036531463)  | 160 (-0.66524124)   | 45 (-0.38147146)    | 36 (-0.15247047)    | 6 (-0.18715335)    | 100 (-0.6304377)  | 40 (-0.10005783)    | 78.3 (-0.6886819)   | 459.875 (0.21727082) | 7.826666667 (0.37161353) | 86.97435897 (0.6349155) | 16 (1.0030446)   | NA (-0.38926163) | 0 (0.034907624)   | NA (1.8974578)   | 1        | 0.39924592      | 0.6007541      | 1                   |
+
+## output
+
+**Step 1 - Identifying Top Three Risk Factors for Extubation**
 
 Based on the SHAP values and the provided patient information, the top three risk factors that appear most influential in predicting extubation failure are:
 
@@ -52,6 +61,16 @@ To enhance the model's predictive performance for extubation failure, consider t
 
 By refining these aspects, the model could become more robust and aligned with clinical realities, enhancing its utility in critical care settings."
 "To address the prompt and interpret the provided data for the patient's extubation decision, let's follow the structured approach.
+
+
+# Test02
+
+## Input
+| Data no | Gender           | Age             | Height          | SAPS-II           | OASIS            | GCS             | SpO2            | FiO2            | MBP                   | VT              | VE                 | HR              | RR              | PiMAX           | COPD            | PCO2              | Pred XGBoost | Prob XGB(1) | Extubation Failure |
+|---------|------------------|-----------------|-----------------|-------------------|------------------|-----------------|-----------------|-----------------|-----------------------|-----------------|--------------------|-----------------|-----------------|-----------------|-----------------|-------------------|--------------|-------------|---------------------|
+| 2       | Male (-0.5704258)| 72 (-0.58438295)| 183 (-0.13554968)| 18 (-0.056172177) | 26 (0.23035668)  | 1 (0.059099633) | 100 (-0.13210595)| 40 (-0.091413595)| 81.03846154 (-1.5480247)| 465.7 (0.03074544)| 6.316666667 (0.014259324)| 88.16 (0.4161748) | 13.25 (1.9875146) | 11.5 (0.35881254)| 0 (0.031931143) | NA (1.4220185) | 1            | 0.5177303    | 1                     |
+
+## Output
 
 ### Step 1: Identify Top Three Risk Factors
 
@@ -106,7 +125,18 @@ To improve the model, consider the following technical and clinical enhancements
 4. **Model Tuning:** Explore different hyperparameters for the XGBoost model, such as increasing the number of trees or adjusting the max depth to better capture nonlinear relationships and interactions between variables.
 
 By addressing these points, the model can be refined to improve its predictive accuracy and clinical relevance in forecasting extubation outcomes."
-"### Step 1 - Risk Factor Analysis
+
+
+# Test03
+
+## Input
+| Data no | Gender           | Age             | Height          | SAPS-II          | OASIS           | GCS            | SpO2           | FiO2            | MBP                 | VT              | VE             | HR               | RR              | PiMAX           | COPD           | PCO2            | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|-----------------|-----------------|------------------|-----------------|----------------|----------------|-----------------|---------------------|-----------------|----------------|------------------|-----------------|-----------------|----------------|-----------------|--------------|---------------|---------------|---------------------|
+| 29      | Male (-0.37537512)| 51 (1.0860199)  | 178 (0.2706207) | 47 (-0.33345723) | 33 (0.613924)   | 6 (0.033004835)| 100 (0.12064766)| 35 (-0.020722957)| 74.29032258 (-0.74653083)| 572.9230769 (0.12538892)| 8.3 (0.34200865)| 89.19230769 (1.1773962)| 14.59375 (2.5076976)| 14.2 (0.28780198)| 0 (0.09707041) | 7.685714286 (0.6121157)| 1            | 0.011707842    | 0.98829216    | 1                     |
+
+## Output
+
+### Step 1 - Risk Factor Analysis
 
 Based on the SHAP values provided, let's identify and discuss the top three risk factors for extubation:
 
@@ -147,6 +177,15 @@ To further enhance the predictive performance of the model, especially for edge 
 5. **Feature Interaction Analysis:** Explore and model interactions between features like heart rate and respiratory rate or age and underlying conditions to capture complex physiological relationships impacting extubation outcomes.
 
 By focusing on these specific areas, the model can be refined to provide more accurate predictions and valuable insights for critical care decisions regarding extubation."
+
+# Test04
+
+## Input
+| Data no | Gender           | Age            | Height          | SAPS-II         | OASIS           | GCS            | SpO2           | FiO2           | MBP                | VT              | VE             | HR             | RR             | PiMAX          | COPD          | PCO2  | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|----------------|-----------------|-----------------|-----------------|----------------|----------------|----------------|--------------------|-----------------|----------------|----------------|----------------|----------------|---------------|-------|--------------|---------------|---------------|---------------------|
+| 35      | Male (-0.47740632)| 75 (-0.08510982)| 173 (1.1985996) | 33 (-0.035867646)| 37 (-0.9441775)  | 5 (-1.0348539)  | 99 (0.57915574)| 50 (0.01593428)| 76.34615385 (-0.73120415)| 505.0833333 (0.9125347)| 7.386666667 (0.19963019)| 64.96 (-0.28204188)| 12.53333333 (1.4776487)| 10.83333333 (-0.0017306581)| 0 (0.023822997) | NA (2.3730383)| 1            | 0.13870513    | 0.86129487    | 1                     |
+
+## Output
 "Based on the provided patient data and following the steps outlined in the system prompt, here is the interpretation and analysis:
 
 **Step 1 - Identification of Top Three Risk Factors**
@@ -190,6 +229,15 @@ To improve the model:
 4. **Feature Engineering**: Incorporate other clinically relevant variables, such as RSBI (Rapid Shallow Breathing Index), which is a known predictor for extubation outcomes.
 
 This tailored approach, focusing on comprehensive data and nuanced interactions, will enhance the model’s predictive performance in a clinical setting."
+
+# Test05
+
+## Input
+| Data no | Gender           | Age             | Height          | SAPS-II         | OASIS           | GCS            | SpO2           | FiO2           | MBP             | VT              | VE             | HR             | RR             | PiMAX           | COPD         | PCO2  | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|-----------------|-----------------|-----------------|-----------------|----------------|----------------|----------------|-----------------|-----------------|----------------|----------------|----------------|-----------------|-------------|-------|--------------|---------------|---------------|---------------------|
+| 37      | Male (-0.49978238)| 19 (-0.52261955)| 183 (0.17236678) | 6 (1.2203879)   | 31 (0.66385585) | 6 (-0.5819427)  | 100 (0.34900016)| 100 (0.5295373)| 73.68 (-0.07725042)| 565.8888889 (-0.28257954)| 7.4625 (0.6475433)| 68.96 (-0.14859782)| 13.3125 (1.8191354)| 25.57142857 (-0.56060725)| 0 (0.02935) | NA (1.9349921)| 1            | 0.03452617    | 0.96547383    | 1                     |	
+
+## Output
 "Based on the given data and guidelines, let's interpret the patient information to evaluate the likelihood of successful extubation and analyze the XGBoost model's prediction.
 
 ### Step 1: Identify Top Three Risk Factors
@@ -233,7 +281,16 @@ To enhance the model's predictive performance:
 - **Clinical Context Integration**: Integrate more clinical context, such as the duration of mechanical ventilation before extubation, sedation levels, and use of muscle relaxants, which could influence muscle strength and respiratory drive post-extubation.
 
 By addressing these points, the model could potentially offer more precise and clinically relevant predictions for extubation outcomes."
-"**Step 1 - Identification of Top Three Risk Factors**
+
+# Test06
+
+## Input
+| Data no | Gender           | Age             | Height          | SAPS-II         | OASIS           | GCS            | SpO2           | FiO2            | MBP             | VT              | VE            | HR            | RR              | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|-----------------|-----------------|-----------------|-----------------|----------------|----------------|-----------------|-----------------|-----------------|---------------|---------------|-----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 40      | Female (0.7059686)| 60 (0.4004152)  | 180 (0.23774084)| 20 (0.6495006)  | 29 (1.7864507)  | 1 (1.3650758)  | 98 (0.3742891) | 40 (-0.002789014)| 81.44 (-2.0522945)| 479.1875 (0.3112779)| 8.925 (1.531848)| 70.72 (0.22496566)| 19.4516129 (-0.25554135)| 24 (0.39800256)| 0 (0.09765701) | NA (1.376
+
+## Output
+By incorporating these suggestions, the model could potentially offer more accurate predictions, especially in complex cases where standard predictors might not capture the full risk profile."	"**Step 1 - Identification of Top Three Risk Factors**
 
 To assess the risk factors for extubation, we analyze the SHAP values associated with each variable. The SHAP values give us an idea of the impact of each variable on the model's prediction. Based on the provided SHAP values, the top three risk factors for this patient are:
 
@@ -277,6 +334,15 @@ To improve the model, consider the following steps:
 4. **Hyperparameter Tuning**: Revisit the model's hyperparameters, such as learning rate or maximum depth, to ensure that the model does not overfit to features like GCS when they are outside their typical range.
 
 By focusing on these areas, the model can be refined to better predict extubation outcomes and handle anomalies in input data."
+
+# Test07
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2            | MBP            | VT              | VE             | HR             | RR             | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|-----------------|----------------|-----------------|----------------|----------------|----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 58      | Male (-0.5260852)| 67 (-2.1877015)   | 178 (-0.8146959) | 19 (0.23629382) | 18 (-0.16462234)| 1 (0.6277527)  | 100 (-0.23514177)| 40 (-0.14077017)| 75.87209302 (-0.0733677)| 486.5833333 (0.4746817)| 6.873333333 (0.2755073)| 77.06666667 (0.6098973)| 14.24489796 (1.6761718)| 19 (1.1047488) | 0 (0.07285599) | NA (2.782988)| 1            | 0.0865404     | 0.9134596     | 1                     |
+
+## Output
 "Based on the provided patient data and the interpretation of the XGBoost model using SHAP values, let's proceed with the analysis:
 
 **Step 1 - Identify Top Three Risk Factors for Extubation**
@@ -325,7 +391,16 @@ However, to analyze why the model might fail in other similar cases:
 4. **Review Data Quality:** Ensure that all input data, especially for key variables like GCS and pCO2, are accurate and complete. Incorrect data can lead to significant model misinterpretation.
 5. **Hyperparameter Tuning:** Explore model hyperparameters to balance the influence of high-impact variables more effectively, potentially using regularization to manage the impact of variables like pCO2 and GCS.
 
-By focusing on these specific improvements and maintaining a clinically guided approach to feature importance, the model can be refined to enhance its predictive performance for extubation outcomes."
+By focusing on these specific improvements and maintaining a clinically guided approach to feature importance, the model can be refined to enhance its predictive performance for extubation outcomeData 
+
+# Test08
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2            | MBP              | VT              | VE             | HR              | RR             | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)      | Prob XGB(1) | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|-----------------|------------------|-----------------|----------------|-----------------|----------------|----------------|---------------|------|--------------|------------------|-------------|---------------------|
+| 92      | Male (-0.22952695)| 87 (0.9014448)   | 173 (1.4454615)  | 46 (-0.028143497)| 44 (-0.044268426)| 1 (1.1316841)  | 99 (0.67273957) | 21 (-0.22201762) | 44.20833333 (0.97081757)| 499.1111111 (1.6911145)| 6.52 (-1.0480148)| 76.95833333 (0.8692264)| 16 (0.42733645)| 21 (0.5354499)  | 0 (0.023822997)| NA (2.2306294)| 1            | 0.00034701824    | 0.999653   | 1                     |	
+
+## Output
 "Based on the provided patient data and following the structured approach to analyzing and interpreting the SHAP values and model predictions, let's address the query step by step.
 
 ### Step 1 - Review the provided patient information and identify the top three risk factors for extubation
@@ -377,7 +452,16 @@ To enhance the model's predictive performance:
 5. **Model recalibration**: Especially for probabilities close to boundaries (0 or 1), recalibrate the model using techniques like isotonic regression or Platt scaling to improve probability estimates, which are crucial for clinical decision-making.
 
 By following these steps, the model can be refined to better handle the complexities of predicting extubation outcomes in critical care."
-"**Step 1: Identify Top Three Risk Factors for Extubation**
+
+# Test09
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP             | VT      | VE           | HR             | RR             | PiMAX          | COPD          | PCO2   | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|-----------------|---------|--------------|----------------|----------------|----------------|---------------|--------|--------------|---------------|---------------|---------------------|
+| 93      | Male (-0.22357558)| 55 (1.1261585)   | 178 (-0.38640964)| 24 (1.6662712)  | 34 (0.69117206) | 1 (0.98142505) | 100 (-0.6473647)| 50 (0.0692343) | 76.93103448 (-0.709424)| 522 (1.2225906)| 10.04285714 (0.5814323)| 80.79166667 (0.3583052)| 19.22580645 (0.15540959)| 20.42857143 (1.1913825)| 0 (0.09507586)| 10.4 (0.27230847)| 1            | 0.006168604    | 0.9938314     | 1                     |
+
+## Output
+**Step 1: Identify Top Three Risk Factors for Extubation**
 
 Based on the provided SHAP values and the patient's medical data, the top three risk factors for extubation are:
 
@@ -415,6 +499,15 @@ While the model performed well in this case, continuous improvement is crucial f
 4. **Patient-Specific Adjustments**: Tailor models or incorporate stratification based on specific subgroups (e.g., COPD patients, patients with neurological impairments) to improve the model’s applicability and performance across different patient categories.
 
 By focusing on these areas, the model can be refined to better predict extubation outcomes, ensuring that extubation decisions are as informed and safe as possible."
+
+# Test10
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP             | VT      | VE          | HR             | RR            | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|-----------------|---------|-------------|----------------|---------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 96      | Female (1.2465539)| 65 (-0.69096553) | 163 (0.84548306) | 27 (0.7221806)  | 39 (-0.73795664)| 1 (0.70068663) | 100 (-0.61482525)| 40 (-0.15395668)| 74.14285714 (-0.25458914)| 422.6 (0.17732874)| 6.0875 (-0.7061485)| 99.2 (-1.1517929)| 15.2 (1.48278) | 17 (0.85935277) | 0 (0.11290882)| NA (0.9769099)| 1            | 0.18968433    | 0.81031567    | 1                     |	
+
+## Output
 "Based on the provided patient data and the interpretation requirements, let's analyze the situation and provide the necessary steps:
 
 **Step 1 - Identification and Impact of Top Three Risk Factors**
@@ -473,7 +566,16 @@ To enhance the model's predictive performance, consider the following improvemen
    Consider adding other clinical parameters like the Rapid Shallow Breathing Index (RSBI) or using dynamic features like changes in respiratory parameters over time to improve predictive accuracy.
 
 By addressing these areas, the model can potentially offer more precise and clinically relevant predictions for extubation outcomes."
-"### Step 1 - Identify Top Three Risk Factors for Extubation
+
+# Test11
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT      | VE          | HR              | RR             | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|---------|-------------|-----------------|----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 1       | Male (-0.50469273)| 40 (0.5969999)   | 178 (-0.22893402) | 27 (0.8688565)  | 30 (1.3442831)   | 1 (0.67566764) | 95 (-2.0245748) | 100 (0.92358196)| 87.57692308 (-1.9528154)| 829.2 (-2.2924473)| 9.62 (-0.07128867)| 80.38461538 (-0.1325104)| 11.07692308 (1.1953623)| 10 (0.07251468) | 0 (0.09965156) | NA (0.36188912)| 0            | 0.9191121     | 0.0808879     | 0                     |
+
+## Output
+### Step 1 - Identify Top Three Risk Factors for Extubation
 
 Based on the provided SHAP values and clinical parameters of the patient, the top three risk factors for extubation in this case are:
 
@@ -485,7 +587,7 @@ Based on the provided SHAP values and clinical parameters of the patient, the to
 
 ### Step 2 - XGBoost Model's Prediction and Evaluation
 
-**XGBoost prediction: 0, 0.0808879** \
+**XGBoost prediction: 0, 0.0808879** 
 **Actual result: 0**
 
 The XGBoost model predicted a low probability of extubation failure, which aligns with the actual outcome of no extubation failure. Given the patient's data and the model's prediction, it seems that the model effectively captured the key variables influencing extubation outcomes, leading to a correct prediction. The high SHAP values for OASIS and SAPSII reflect their significant impact on the model's decision, confirming their critical roles in assessing the patient's condition for extubation.
@@ -507,6 +609,15 @@ To enhance the predictive performance of the model, consider the following adjus
 4. **Model Robustness Checks:** Regularly perform cross-validation with diverse patient data to ensure the model's robustness and adaptability to different clinical scenarios, which might include less typical cases or outliers.
 
 These targeted improvements should aid in refining the model's capability to predict extubation outcomes more accurately in varied clinical settings."
+
+# Test12
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE              | HR              | RR              | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-----------------|-----------------|-----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 4       | Male (-0.3122569)| 75 (0.19090116)  | 178 (-1.0926211) | 64 (0.02940491) | 47 (0.22882143) | 6 (-0.8722361) | 98 (-0.13830747)| 50 (-0.115710676)| 83.62962963 (-2.502463)| 431.0952381 (-0.27602786)| 10.88888889 (-0.2680902)| 119.7037037 (-0.30043295)| 20.8125 (-1.0315815)| 12.4 (0.2232345) | 0 (0.01823068)| 10 (-0.21725453)| 0            | 0.99958974    | 0.00041027516 | 0                     |
+
+## Output
 "Step 1 - Risk Factor Analysis:
 1. MBP: 83.62962963 (SHAP value: -2.502463): This variable shows the largest negative SHAP value, suggesting it is a crucial factor contributing to the decision against extubation failure. Lower mean blood pressure can indicate instability in hemodynamics, which is critical for ensuring adequate organ perfusion and overall stability before extubation.
 2. RR: 20.8125 (SHAP value: -1.0315815): Respiratory rate also has a significant negative SHAP value. It’s essential to evaluate whether the patient’s respiratory rate is effectively supporting their physiological needs without mechanical assistance, as tachypnea or labored breathing can indicate underlying respiratory distress.
@@ -524,8 +635,17 @@ Step 4 - Suggestions for Model Improvement:
 To further enhance the predictive performance of the model, consider the following adjustments:
 1. **Reevaluation of Height's Influence**: While height has a significant SHAP value, its direct clinical relevance to extubation outcome is ambiguous. It might be beneficial to reevaluate how height is factored into the model, potentially focusing more on its role in calculating lung volumes or respiratory mechanics.
 2. **Integration of Dynamic Variables**: Including more dynamic variables like changes in MBP or RR over time could provide deeper insights into patient stability or deterioration, improving predictive accuracy.
-3. **Advanced Feature Engineering**: Employing techniques like polynomial features for non-linear relationships (e.g., interaction between GCS and respiratory variables) might capture more complex patterns in the data, enhancing the model's understanding of critical care scenarios."
-"### Step 1 - Identification of Top Three Risk Factors for Extubation
+3. **Advanced Feature Engineering**: Employing techniques like polynomial features for non-linear relationships (e.g., interaction between GCS and respiratory variables) might capture more complex patterns in the data, enhancing the model's understanding of critical care scenarios.
+
+# Test13
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE              | HR              | RR              | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-----------------|-----------------|-----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 8       | Male (-0.05371869)| 43 (0.22676453)  | 183 (-0.45044872)| 17 (0.033070117)| 33 (0.17260034) | 6 (-0.6374223) | 98 (0.09293672) | 50 (-0.0013424503)| 98.76056338 (-4.0287786)| 448.4166667 (-0.13942702)| 10.975 (-0.54006404)| 75.87323944 (0.69838154)| 28.01265823 (-0.415225)| 18.5 (0.23252644) | 0 (0.058203243)| NA (1.160292)| 0            | 0.9929911     | 0.007008924   | 0                     |
+
+## Output
+### Step 1 - Identification of Top Three Risk Factors for Extubation
 
 Based on the provided SHAP values, the top three risk factors associated with the patient’s extubation outcome are:
 
@@ -555,6 +675,15 @@ The model's result matches the actual result. However, it's essential to evaluat
 3. **Model Refinement**: Reassess the model hyperparameters or consider ensemble techniques that might handle outliers and variable interactions more robustly, providing a more nuanced understanding of patient status.
 
 These improvements could potentially enhance the predictive performance of the model, particularly in complex clinical scenarios like extubation readiness, where multifactorial considerations are crucial."
+
+# Test14
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE              | HR              | RR              | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-----------------|-----------------|-----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 12      | Male (-0.047547832)| 43 (0.24481425)  | 183 (-0.6639815) | 17 (0.09326209) | 33 (0.2001578)  | 1 (0.8224108)  | 96 (-1.7114307) | 50 (0.022762008)| 97.46428571 (-4.0781446)| 491.8666667 (0.32024628)| 11.11666667 (-0.699785)| 81.74074074 (-0.00812174)| 26.93939394 (-0.18703099)| 18.5 (0.4658069) | 0 (0.058203243)| NA (0.7932606)| 0            | 0.99678594    | 0.0032140543  | 0                     |
+
+## Output
 "**Step 1**  
 Given the patient information and SHAP values provided, the top three risk factors for extubation in this case are:
 
@@ -577,8 +706,17 @@ To enhance the model's performance and reliability in critical care settings:
 2. **Feature Engineering:** Incorporate additional clinically relevant variables such as the rate of spontaneous breathing trials success or the use of accessory muscles during respiration, which could provide deeper insights into the patient’s readiness for extubation.
 3. **Model Hyperparameter Tuning:** Explore different settings for the XGBoost model’s parameters such as increasing the number of boosting rounds or adjusting the depth of trees, which might help in achieving a better balance between sensitivity and specificity, especially in borderline cases.
 
-These improvements can help tailor the model more closely to the nuances of extubation in critical care, potentially increasing its clinical utility and accuracy."
-"### Step 1 - Risk Factors Analysis
+These improvements can help tailor the model more closely to the nuances of extubation in critical care, potentially increasing its clinical utility and accuracy.
+
+# Test15
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE              | HR              | RR              | PiMAX          | COPD          | PCO2   | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-----------------|-----------------|-----------------|----------------|---------------|--------|--------------|---------------|---------------|---------------------|
+| 14      | Male (-0.48490107)| 63 (-1.0133027)  | 183 (-1.1088898) | 20 (0.927383)   | 27 (0.3832568)  | 1 (0.7546543)  | 95 (-1.4859195) | 50 (-0.1736277) | 86.32 (-1.0318745)| 713.75 (-1.6104705)| 10.76666667 (-0.13935946)| 67.96 (-1.0771725)| 15.32258065 (0.6436881)| 15.83333333 (-0.63059074) | 1 (-0.18077259) | 14.85 (2.822825)| 0            | 0.9915656     | 0.008434441   | 0                     |
+
+## Output
+### Step 1 - Risk Factors Analysis
 
 Given the SHAP values and clinical data of the patient, here are the top three risk factors for extubation:
 
@@ -607,7 +745,16 @@ The model's result matches the actual result. No discrepancy between the model�
    
 3. **Continuous Monitoring Data**: Incorporating trends over time rather than averages (e.g., changes in GCS, PCO2 levels) before extubation could provide deeper insights into patient stability and readiness for extubation.
    
-These enhancements can help refine the model’s accuracy, making it a more reliable tool in clinical decision-making for extubation."
+These enhancements can help refine the model’s accuracy, making it a more reliable tool in clinical decision-making for extubation.
+
+# Test16
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE              | HR              | RR              | PiMAX          | COPD          | PCO2   | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-----------------|-----------------|-----------------|----------------|---------------|--------|--------------|---------------|---------------|---------------------|
+| 18      | Male (-0.5085384) | 46 (0.60338646)  | 185 (-0.55371594)| 24 (0.7738557)  | 16 (0.8292675)  | 6 (-0.44850206)| 99 (0.16974014) | 40 (-0.05155424)| 88.48 (-1.8124157)| 703.2463636 (-2.0621538)| 10.57833333 (0.018099539)| 97.64 (-1.5894392)| 13.29032258 (1.6981498)| 12.83333333 (0.12336357) | 0 (0.09965156) | NA (0.10786264)| 0            | 0.9813819     | 0.0186181    | 0                     |
+
+## Output
 "### Step 1 - Identification of Top Three Risk Factors for Extubation
 
 Based on the provided patient data and SHAP values, the top three risk factors for extubation in this case are:
@@ -643,7 +790,16 @@ Given the success in this prediction, the model seems robust in this scenario. H
 3. **Non-linear Interaction Terms:** Adding interaction terms between variables like SAPS II and respiratory variables might capture more complex clinical interactions that could affect extubation outcomes.
 
 By enhancing these aspects, the model might not only maintain its performance but also improve its predictive accuracy and reliability in more borderline cases."
-"### Step 1: Top Three Risk Factors for Extubation
+
+# Test17
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE              | HR              | RR              | PiMAX          | COPD          | PCO2   | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-----------------|-----------------|-----------------|----------------|---------------|--------|--------------|---------------|---------------|---------------------|
+| 19      | Female (0.53621316)| 53 (-0.0393236)  | 160 (-0.55056477)| 13 (0.5174482)  | 20 (-0.4272675) | 6 (-0.5739796) | 99 (0.39008155) | 35 (0.014901044)| 91.32 (-2.3921647)| 333.2222222 (-1.7616689)| 8.4375 (0.6506158)| 66.12 (0.6071644)| 24.55555556 (-1.6298106)| 11.25 (0.1568112) | 0 (0.05000235) | NA (0.825267)| 0            | 0.99322796    | 0.006772024  | 0                     |
+
+## Output
+### Step 1: Top Three Risk Factors for Extubation
 1. **mbp_shap:-2.3921647**: The highly negative SHAP value for mean blood pressure (MBP) suggests it is a critical factor negatively influencing the extubation outcome. The MBP of 91.32 might indicate adequate perfusion but its SHAP value reveals an increased risk of extubation failure.
 2. **rr_shap:-1.6298106**: Respiratory rate (RR) with a value of 24.56 and a negative SHAP value signifies that higher RR values could be indicating underlying respiratory distress, which can impact extubation success.
 3. **vt_shap:-1.7616689**: Tidal volume (VT) at 333.22 ml has a negative impact as per its SHAP value. This could imply inadequate ventilatory capacity relative to patient size and needs, posing a risk for extubation.
@@ -661,8 +817,17 @@ The model's result matches the actual result. No discrepancy between the model�
 2. **Data Preprocessing**: Incorporate trend analysis for variables like MBP, RR, and VT to understand the trajectory rather than single time-point values. This could enhance predictive accuracy by reflecting patient stability or deterioration more effectively.
 3. **Model Hyperparameters**: Tuning the sensitivity of the model to the critical thresholds of clinical parameters like RR and MBP could improve its predictive reliability, especially in edge cases where the standard deviation of these parameters is high.
 
-These focused improvements could refine the model’s application to a broader set of clinical scenarios, potentially increasing its reliability and robustness in predicting extubation outcomes."
-"**Step 1 - Review and Risk Factor Identification:**
+These focused improvements could refine the model’s application to a broader set of clinical scenarios, potentially increasing its reliability and robustness in predicting extubation outcomes.
+
+# Test18
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE              | HR              | RR              | PiMAX          | COPD          | PCO2   | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-----------------|-----------------|-----------------|----------------|---------------|--------|--------------|---------------|---------------|---------------------|
+| 20      | Male (-0.06804225)| 68 (-0.12294658) | 175 (-0.08354169)| 47 (-0.21088503)| 35 (-0.08294607)| 1 (0.641762)   | 97 (-0.88545334)| 40 (-0.05077773)| 94.7037037 (-3.7491663)| 486.8333333 (-0.05707047)| 12.26666667 (-0.6221589)| 107.3333333 (0.1521725)| 25.03703704 (-0.28577694)| 14.66666667 (-0.66957325)| 0 (0.022190424)| NA (0.14090596)| 0            | 0.9993203     | 0.000679691  | 0                     |
+
+## Output
+**Step 1 - Review and Risk Factor Identification:**
 For this patient, the top three risk factors for extubation based on the SHAP values are:
 1. GCS:1 (SHAP value: 0.641762) - The Glasgow Coma Scale score of 1 indicates a very low level of consciousness, which is highly unusual as GCS typically ranges from 3 to 15. This could indicate severe brain dysfunction, making extubation risky if this value were correct. However, since GCS of 1 is not a standard score, this may suggest data entry error or misinterpretation.
 2. MBP:94.7 (SHAP value: -3.7491663) - Mean Blood Pressure is slightly on the lower side but within acceptable ranges; the negative SHAP value suggests that higher MBP could be more reassuring for extubation success.
@@ -681,8 +846,17 @@ The model's result matches the actual result. There are no discrepancies between
 2. **Feature Engineering**: Incorporating trend analysis of vital signs like GCS, MBP, and respiratory rates could help understand patient stability over time rather than relying on a single pre-extubation value.
 3. **Hyperparameter Tuning**: Adjust the model's sensitivity to variables with high predictive impact, such as GCS, to ensure that unusual values significantly influence the prediction outcome.
 
-These targeted improvements could enhance the model's predictive accuracy and robustness, particularly in complex clinical scenarios."
-"### Step 1: Identification of Top Three Risk Factors
+These targeted improvements could enhance the model's predictive accuracy and robustness, particularly in complex clinical scenarios.
+
+# Test19
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE          | HR              | RR              | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-------------|-----------------|-----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 21      | Female (0.7221692) | 52 (-0.02689985) | 147 (1.6972517)  | 56 (-0.2836031) | 46 (-0.53728616)| 4 (0.6918198)  | 96 (-1.2459728) | 50 (0.11961355) | 102.5925926 (-4.0412526)| 463.6666667 (-0.1695055)| 7.5 (0.8817312) | 108.7407407 (-0.33561483)| 16.33333333 (-0.23080222)| 19.57142857 (1.6752795) | 0 (0.04682018) | NA (0.052374475)| 0            | 0.912597      | 0.08740301    | 0                     |
+
+## Output
+### Step 1: Identification of Top Three Risk Factors
 1. **Height: 147 (SHAP value: 1.6972517)** - Height impacts lung volume and mechanics, which could affect ventilation and oxygenation efficiency during and after extubation. A shorter stature may indicate smaller lung capacity, potentially complicating extubation.
 2. **Pimax: 19.57142857 (SHAP value: 1.6752795)** - Maximal inspiratory pressure is crucial for assessing respiratory muscle strength. A lower Pimax could suggest weak respiratory muscles, raising the risk of extubation failure.
 3. **Gender: 1 (SHAP value: 0.7221692)** - In this case, the gender has a significant SHAP value, indicating it may be important. Physiologically, men and women may have different lung volumes and airway sizes, which could influence extubation outcomes. 
@@ -702,6 +876,15 @@ The model's result matches the actual result, so there are no discrepancies betw
 3. **Clinical Validation of SHAP Values** - Validate the model further by checking SHAP values against larger datasets or different demographics to ensure that the model's reliance on variables like height and gender is clinically relevant and not a bias in the training data.
 
 By refining these aspects, the predictive accuracy and clinical relevance of the model for extubation outcomes could potentially be enhanced."
+
+# Test20
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE          | HR              | RR              | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-------------|-----------------|-----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 24      | Female (0.7221692) | 52 (-0.026689505)| 157 (0.59124553) | 56 (-0.30392778)| 46 (-0.5687423) | 4 (0.3975365)  | 96 (-1.2859491) | 50 (0.11961355) | 102.5925926 (-4.0412526)| 463.6666667 (-0.17751542)| 7.5 (0.44616294)| 108.7407407 (-0.33088574)| 16.33333333 (-0.24123614)| 19.57142857 (1.6757504) | 0 (0.04682018) | NA (0.038737647)| 0            | 0.98661375    | 0.013386249   | 0                     |
+
+## Output
 "### Step 1: Identification of Top Three Risk Factors for Extubation
 
 Based on the SHAP values and the clinical data provided, the three most critical factors influencing the decision to extubate this patient are:
@@ -730,31 +913,49 @@ Despite the correct prediction in this case, continuous improvement of the model
 - **Exploring Additional Variables**: Incorporate dynamic measures of respiratory function and readiness for extubation, such as the Rapid Shallow Breathing Index (RSBI), which could provide a more nuanced view of a patient’s ability to maintain adequate ventilation independently.
 
 These enhancements can help refine the predictive accuracy and utility of the XGBoost model in clinical settings, supporting critical care decisions with more precision."
-"Step 1: Top Three Risk Factors for Extubation
+# Test21
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE          | HR              | RR              | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-------------|-----------------|-----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 16      | Female (0.5127635)| 45 (0.45390648)  | 152 (0.7931633)  | 34 (-0.23819189)| 35 (0.11586398) | 1 (0.6012552)  | 96 (-1.2122306) | 40 (-0.034546748)| 66.16 (0.8326065) | 497.7777778 (0.8403482)| 7.34 (0.73515564)| 95.12 (-1.33804)| 15.74074074 (0.33877414)| 10.75 (-0.645265) | 0 (0.10262804)| NA (0.66444296)| 1            | 0.23853165    | 0.76146835    | 0                     |
+
+## Output
+### Step 1: Top Three Risk Factors for Extubation
 VT: 497.778 (SHAP value: 0.8403482) - Tidal volume (VT) is a crucial factor in determining respiratory muscle strength and lung capacity post-extubation. Higher SHAP value indicates its strong influence in predicting extubation outcomes. The average VT close to 500 ml suggests that while the patient's lungs are functioning at a capacity that might handle spontaneous breathing, careful monitoring is needed given the proximity to lower normal limits.
 
 MBP: 66.16 (SHAP value: 0.8326065) - Mean Blood Pressure (MBP) plays a vital role in ensuring adequate organ perfusion, including the respiratory muscles. An MBP of 66.16 is on the lower side of normal, which could impact the patient's overall stability post-extubation, as indicated by its high SHAP value.
 
 GCS: 1 (SHAP value: 0.6012552) - Glasgow Coma Scale (GCS) of 1 is abnormally low and does not align with typical medical assessments where the minimum score is 3. This could either be a data error or an indication of a severely decreased level of consciousness. Such a low GCS would typically contraindicate extubation due to poor neurological status.
 
-Step 2: Model's Prediction and Analysis
+### Step 2: Model's Prediction and Analysis
 XGBoost prediction: 1 (Probability of extubation failure: 76.15%)
 Actual result: 0 (No extubation failure)
 
 The XGBoost model predicted a high risk of extubation failure, which did not occur. This discrepancy might be influenced by the possibly erroneous GCS value. A GCS of 1, if accurate, would usually suggest a high risk of failure, but since the patient did not fail extubation, this raises questions about either the GCS score's accuracy or the patient's rapid improvement.
 
-Step 3: Discrepancies Analysis
+### Step 3: Discrepancies Analysis
 The primary discrepancy here is the GCS value of 1, which is unusually low and could be an error since it contradicts the actual successful outcome. Additional variables to consider:
 
 SPO2: 96% (SHAP value: -1.2122306) - This value is typically positive for successful extubation, yet its negative SHAP value suggests the model might be undervaluing its importance.
 HR: 95.12 (SHAP value: -1.33804) - The model suggests that the current heart rate negatively influences the prediction, which might be due to an overemphasis on tachycardia as a risk factor.
 PCO2: NA (SHAP value: 0.66444296) - The lack of actual PCO2 data is a significant gap, given its importance in assessing respiratory status post-extubation.
-Step 4: Suggestions for Model Improvement
+
+### Step 4: Suggestions for Model Improvement
 Verify and refine input data quality, especially for critical values like GCS. Ensuring accurate data inputs is essential for reliable model predictions.
 Incorporate dynamic assessments of variables like GCS and PCO2 closer to the extubation event to get real-time insights into the patient's condition.
 Adjust model sensitivity to SPO2 and HR values, potentially recalibrating the impact these have on the prediction outcomes to better reflect their clinical significance in successful extubation.
 Further, enhancing the dataset with more granular temporal data and including variables such as the rate of improvement in respiratory and neurological status might help in refining the predictive accuracy of the model for extubation outcomes."
-"### Step 1: Identification of Top Three Risk Factors
+
+# Test22
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT      | VE              | HR              | RR              | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|---------|-----------------|-----------------|-----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 32      | Male (-0.57539624)| 75 (0.34039196)  | 173 (1.24204)    | 33 (-0.26535007)| 37 (-0.5879771) | 1 (0.64334595) | 100 (-0.82425714)| 40 (-0.1751657) | 78.9 (-0.94413847) | 407 (-0.28906932) | 9.633333333 (-0.4027645) | 75.42857143 (0.7695768)| 18 (0.47697583)| 10.16666667 (-0.20820205) | 0 (0.023822997)| NA (2.217133)| 1            | 0.48024058    | 0.5197594     | 0                     |
+
+## Output
+### Step 1: Identification of Top Three Risk Factors
 
 1. **GCS: 1 (SHAP value: 0.64334595)** - The Glasgow Coma Scale (GCS) score is critically low, indicating severe impairment of consciousness. This is a major concern for extubation as it suggests the patient may not have adequate airway protection or respiratory drive post-extubation.
    
@@ -790,7 +991,16 @@ To enhance the model's predictive accuracy and clinical relevance:
 4. **Clinical Validation and Feedback Loop**: Integrate routine clinical feedback into the model training process to adjust predictions based on real-world outcomes and practitioner insights, which will help in aligning the model more closely with practical clinical scenarios.
 
 These improvements can help in refining the model to be more robust and clinically applicable, particularly in critical care settings where nuanced patient management decisions are essential."
-"**Step 1 - Risk Factors for Extubation:**
+
+# Test23
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT      | VE          | HR              | RR              | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|---------|-------------|-----------------|-----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 107     | Male (-0.4810887) | 71 (-0.18814509) | 185 (-1.0145086) | 27 (1.071193)   | 40 (-0.46984413)| 1 (1.0085062)  | 96 (-2.2014208) | 40 (-0.10133471)| 79.74074074 (-0.435567) | 483.1428571 (0.25321162) | 9.8 (0.40371418) | 69.59259259 (-0.14262427)| 19.06451613 (-0.04110497)| 19.85714286 (1.8733426) | 0 (0.018254949)| NA (2.2016616)| 1            | 0.4031492     | 0.5968508     | 0                     |
+
+## Output
+**Step 1 - Risk Factors for Extubation:**
 1. **pimax:19.85714286 (SHAP value: 1.8733426)** - The maximal inspiratory pressure (pimax) is high, indicating relatively good muscle strength in breathing, which usually suggests a better likelihood for successful extubation. However, the high SHAP value suggests it has a significant impact on the model's prediction, potentially influencing the prediction towards extubation failure, which is counterintuitive and needs further investigation.
 2. **gcs:1 (SHAP value: 1.0085062)** - A Glasgow Coma Scale (GCS) of 1 is extremely low and typically indicative of severe brain injury or impairment. This value is concerning and likely incorrect as GCS scores range from 3 to 15. This anomaly could be a data entry error affecting both the model's prediction and clinical decision-making.
 3. **sapsii:27 (SHAP value: 1.071193)** - The Simplified Acute Physiology Score II (SAPS II) is moderate, indicating a significant risk of mortality. A higher SHAP value here highlights its importance in the model's assessment of extubation failure risk.
@@ -807,8 +1017,17 @@ The primary issue here appears to be the incorrect GCS value, as a GCS of 1 is n
 1. **Data Quality Assurance:** Ensure accuracy in data entry, particularly for critical scores like GCS. Implementing automated checks or validations to flag values outside expected ranges could prevent similar issues.
 2. **Handling Missing Data:** Address missing values, especially for key variables like pCO2. Techniques such as imputation or the use of median/mean values based on patient demographics and conditions might provide a more complete dataset for model training.
 3. **Review Variable Impact:** Re-evaluate the weighting of variables like pimax in the model. If necessary, adjust the model to balance the influence of various predictors more appropriately, reflecting their clinical relevance and interdependencies.
-4. **Additional Variables:** Consider incorporating other relevant clinical indicators that might influence extubation outcomes, such as fluid balance, sedation levels, and other laboratory results like blood gas analysis, to enhance the model's predictive capability."
-"### Step 1 - Top Three Risk Factors for Extubation
+4. **Additional Variables:** Consider incorporating other relevant clinical indicators that might influence extubation outcomes, such as fluid balance, sedation levels, and other laboratory results like blood gas analysis, to enhance the model's predictive capability.
+
+# Test24
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT      | VE         | HR              | RR              | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|---------|------------|-----------------|-----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 109     | Male (-0.33271977)| 71 (-0.23949818) | 185 (-0.57026315)| 27 (0.46295756) | 40 (-0.22528827)| 5 (-0.8704081) | 99 (0.8896908)  | 40 (-0.12896736)| 62.28571429 (1.1582096) | 454.0588235 (-0.91714996) | 9.575 (0.20467924) | 82.68 (0.6244284)| 20.88571429 (-1.088183)| 19.85714286 (1.9972844) | 0 (0.015649537)| NA (2.4371006)| 1            | 0.113484204   | 0.8865158     | 0                     |
+
+## Output
+### Step 1 - Top Three Risk Factors for Extubation
 
 1. **pco2:NA (SHAP value: 2.4371)**
    - Although the actual value of PCO2 is missing (NA), its high SHAP value indicates a strong influence on the model's decision. The partial pressure of arterial carbon dioxide (PCO2) is a critical measure in assessing respiratory function and acid-base balance. In the context of extubation, appropriate PCO2 levels are crucial for determining a patient's ability to breathe independently without mechanical ventilation.
@@ -839,8 +1058,17 @@ The model predicted failure, whereas the patient successfully remained extubated
 1. **Incorporate Range Checking for Critical Variables**: Implement checks for abnormal values that could affect model predictions, such as the GCS being too low, which is typically incompatible with a conscious state required for successful extubation.
 2. **Enhance Data Completeness**: Address missing values, especially for critical variables like PCO2, by imputation techniques or ensuring more comprehensive data collection.
 3. **Adjust Model Sensitivity to Marginal Values**: Refine the model to handle marginal values (like pimax around 20) more effectively, perhaps by integrating nonlinear relationships or interaction terms that could more accurately reflect clinical scenarios.
-4. **Include Additional Clinical Parameters**: Consider adding parameters like readiness-to-wean scores or specific laboratory markers (e.g., blood lactate levels) that might provide more insights into the patient's overall stability and readiness for extubation."
-"### Step 1 - Identification of Top Three Risk Factors
+4. **Include Additional Clinical Parameters**: Consider adding parameters like readiness-to-wean scores or specific laboratory markers (e.g., blood lactate levels) that might provide more insights into the patient's overall stability and readiness for extubation.
+
+# Test25
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT      | VE         | HR              | RR              | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|---------|------------|-----------------|-----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 116     | Female (0.60934544)| 81 (0.50532985)  | 163 (0.9593882)  | 39 (-0.04965863)| 37 (-0.5039391) | 1 (1.7007289)  | 96 (-1.4706357) | 50 (0.2219791) | 66.92307692 (1.8663132)| 348.1666667 (-0.47959578)| 7.4 (0.28015512) | 59.19230769 (-0.43626317)| 20.5 (-0.07509263)| 21.83333333 (0.61925286) | 0 (0.02120716) | NA (2.366326)| 1            | 0.008384526   | 0.9916155     | 0                     |
+
+## Output
+### Step 1 - Identification of Top Three Risk Factors
 
 1. **GCS: 1 (SHAP value: 1.7007289)** - The Glasgow Coma Scale (GCS) score of 1 is exceptionally low, indicating extremely poor neurological status. Such a low score suggests deep unconsciousness or a comatose state, raising significant concerns about the patient's ability to maintain airway patency post-extubation.
    
@@ -871,8 +1099,17 @@ There is a discrepancy between the model's prediction and the actual outcome (su
 
 3. **Feature Engineering**: Consider integrating dynamic features that reflect changes over time, such as trends in GCS, MBP, or respiratory parameters, rather than relying solely on static or snapshot values. This could provide a more nuanced understanding of the patient's trajectory.
 
-By enhancing the model's handling of data quality, completeness, and the dynamic nature of clinical situations, we can improve its predictive accuracy and utility in critical care settings."
-"**Step 1 - Identification and Evaluation of Top Three Risk Factors**
+By enhancing the model's handling of data quality, completeness, and the dynamic nature of clinical situations, we can improve its predictive accuracy and utility in critical care settings.
+
+# Test26
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE              | HR              | RR              | PiMAX          | COPD          | PCO2  | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-----------------|-----------------|-----------------|----------------|---------------|-------|--------------|---------------|---------------|---------------------|
+| 135     | Male (-0.09687573)| 88 (-0.5375524)  | 175 (-0.54171956)| 31 (0.024113178)| 32 (0.34032264) | 1 (0.82584256) | 100 (-0.7317357)| 50 (0.059669204)| 86.07407407 (-1.5071157)| 543.9285714 (0.31980094)| 9.085714286 (0.34184146)| 77.88461538 (-0.3202999)| 17.46875 (0.23499088)| 20.28571429 (0.79450405) | 0 (0.050425615)| 12.7 (2.1136115)| 1            | 0.4980163     | 0.5019837     | 0                     |
+
+## Output
+**Step 1 - Identification and Evaluation of Top Three Risk Factors**
 1. **pco2_shap: 12.7(2.1136115)** - High pCO2 levels generally indicate poor ventilatory reserve and may suggest difficulty in handling respiratory loads after extubation. The high SHAP value underscores its significant influence on predicting extubation failure, indicating it is crucial in decision-making.
 2. **gcs_shap: 1(0.82584256)** - A Glasgow Coma Scale of 1, although likely a data entry error (as GCS typically ranges from 3 to 15), points to severe impairment in consciousness. If accurate, this would be a critical factor against extubation due to the patient’s likely inability to protect their airway.
 3. **pimax_shap: 20.28571429(0.79450405)** - Maximal inspiratory pressure is an essential measure of respiratory muscle strength. A pimax of around 20 cmH2O, being on the lower boundary of typical extubation criteria, combined with a high SHAP value, emphasizes its importance in the model’s assessment.
@@ -895,6 +1132,15 @@ The primary discrepancy is the model's prediction of failure against the actual 
 3. **Hyperparameter Tuning:** Reevaluate the model with different parameters, potentially increasing the weight on clinical judgment or decreasing dependency on single, highly influential features to reduce prediction volatility.
 
 Additional clinical parameters like readiness for spontaneous breathing trial results or trends in respiratory parameters over time might also enhance the model's predictive accuracy."
+
+# Test27
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT  | VE          | HR              | RR              | PiMAX  | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----|-------------|-----------------|-----------------|--------|---------------|------|--------------|---------------|---------------|---------------------|
+| 150     | Male (-0.40435418)| 77 (0.16964552)  | 178 (-0.27763683)| 25 (1.0674188)  | 32 (0.11276499) | 1 (1.0816295)  | 99 (0.7009252)  | 40 (-0.020607729)| 70.87878788 (2.1575918)| 585 (-0.54393417) | 10.10909091 (-0.34220862)| 72.09375 (0.4832612)| 17.18918919 (0.0960606) | NA (0.4065719) | 1 (-0.14458725) | NA (1.860215)| 1            | 0.006426513   | 0.9935735     | 0                     |
+
+## Output
 "Interpretation:
 
 **Step 1 - Identification of Top Three Risk Factors for Extubation**
@@ -915,7 +1161,16 @@ The primary cause of the model's incorrect prediction seems to be the reliance o
 2. **Handling Missing Values**: Develop strategies for imputing missing critical values like PCO2, possibly using regression techniques or averages derived from patient cohorts with similar characteristics.
 3. **Model Training on Balanced Data**: Considering the possibility of model bias towards predicting failure (as indicated by the high failure probability), retraining the model with a more balanced dataset concerning outcomes might improve its accuracy.
 4. **Inclusion of Additional Variables**: Factors such as the patient’s previous response to extubation attempts, duration of intubation, and use of sedatives or neuromuscular blocking agents could provide more context to the model, potentially enhancing its predictive performance."
-"### Step 1 - Identification of Top Three Risk Factors for Extubation
+
+# Test28
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT  | VE         | HR              | RR              | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----|------------|-----------------|-----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 167     | Female (1.2176962) | 41 (0.5863901)   | 165 (-0.20058563)| 26 (0.94363534) | 36 (0.31597888) | 1 (1.2002807)  | 93 (-1.7735599) | 80 (0.73597944) | 83.5 (-1.4640878) | 611 (-1.2373002) | 8.8375 (0.60250723)| 82.88 (-0.055195615)| 14.76 (1.4622037)| 10.25 (-0.512576) | 0 (0.11062361) | NA (0.24697435)| 1            | 0.30638438    | 0.6936156     | 0                     |
+
+## Output
+### Step 1 - Identification of Top Three Risk Factors for Extubation
 The most significant risk factors for this patient, based on SHAP values, are:
 
 1. **GCS: 1 (SHAP value: 1.2002807)** - The extremely low Glasgow Coma Scale score suggests severely impaired consciousness, which is a critical factor in the decision to extubate, as it can indicate poor neurological status and compromised airway protection.
@@ -942,8 +1197,17 @@ To enhance the model’s predictive accuracy for extubation outcomes:
 - **Adjust variable sensitivity**: The model seems highly sensitive to certain parameters like GCS. Calibration of these sensitivities based on broader datasets or more granular clinical thresholds could help reduce false positives.
 - **Include additional clinical parameters**: Variables like the rate of improvement in respiratory and neurological status, or readiness tests for extubation such as cuff leak tests or spontaneous breathing trials, could provide more targeted data for making extubation decisions.
 
-These specific improvements, focused on clinical relevance and detailed data analysis, could significantly refine the model's performance in predicting extubation outcomes."
-"### Step 1: Identification of Top Three Risk Factors
+These specific improvements, focused on clinical relevance and detailed data analysis, could significantly refine the model's performance in predicting extubation outcomes.
+
+# Test29
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT  | VE         | HR  | RR              | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----|------------|-----|-----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 197     | Female (0.6678214) | 75 (-0.110071346)| 163 (0.32027325) | 18 (0.32444113) | 36 (-0.025026124)| 1 (1.2737677)  | 100 (-0.74271595)| 40 (-0.045129087)| 70.81481481 (1.3339565)| 364.5 (-0.7938375) | 6.957142857 (0.15792316)| 81 (-0.16400552) | 17.55172414 (0.3022255)| 10.5 (-0.12816493) | 0 (0.034907624) | NA (2.0600495)| 1            | 0.042920887   | 0.9570791     | 0                     |
+
+## Output
+### Step 1: Identification of Top Three Risk Factors
 
 The top three risk factors for this patient regarding extubation, based on the provided SHAP values, are:
 1. **GCS:1 (SHAP value: 1.2737677)** - The Glasgow Coma Scale (GCS) score of 1, which is unusually low and indicates a severe reduction in consciousness. In typical clinical settings, GCS scores range from 3 to 15. This abnormal value suggests a data entry error or a severely compromised neurological state, which significantly impacts the ability to maintain airway reflexes post-extubation.
@@ -973,8 +1237,17 @@ Another variable to consider:
 3. **Feature Engineering:** Consider incorporating additional respiratory mechanics measures, such as dynamic lung compliance or airway resistance, to provide more direct assessments of respiratory system status post-extubation.
 4. **Model Calibration:** Reassess the impact weights (SHAP values) assigned to variables, especially when extreme values disproportionately influence predictions. Calibration could also involve adjusting decision thresholds based on clinical relevance and outcome distribution within the training dataset.
 
-By addressing these specific issues, the model could achieve a more accurate and clinically relevant performance, improving its utility in critical care settings."
-"### Step 1: Identification of Top Three Risk Factors
+By addressing these specific issues, the model could achieve a more accurate and clinically relevant performance, improving its utility in critical care settings.
+
+# Test30
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE          | HR              | RR              | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-------------|-----------------|-----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 201     | Male (-0.16384338)| 70 (-0.26809943) | 183 (-0.89917713)| 67 (-0.27434614)| 42 (-0.5688187) | 1 (0.9128558)  | 99 (0.91615915) | 40 (-0.16956313)| 80.2 (-0.31269863)| 509.5833333 (1.2520808)| 9.1 (0.34437853)| 84.44 (0.74139136)| 17.82142857 (0.49941716)| 20.83333333 (1.0191039) | 0 (0.020249503)| NA (2.3319323)| 1            | 0.01765138    | 0.9823486     | 0                     |
+
+## Output
+### Step 1: Identification of Top Three Risk Factors
 Based on the SHAP values, the top three risk factors for extubation in this patient are:
 1. **pco2: NA (SHAP value: 2.3319323)** - The partial pressure of arterial carbon dioxide (pCO2) is a critical factor in assessing respiratory function, especially post-extubation. A higher SHAP value indicates significant impact on the model’s decision, but the actual pCO2 value is missing, which necessitates an urgent measurement for informed decision-making.
 2. **vt: 509.5833333 (SHAP value: 1.2520808)** - Tidal volume (VT) is vital for assessing lung mechanics. This patient’s VT is within a normal range which suggests adequate lung function, but the high SHAP value implies its substantial influence on the risk of extubation failure.
@@ -998,7 +1271,16 @@ To improve the model’s accuracy and utility in clinical settings:
 2. **Review and Validate Data Inputs:** Ensure that all input data, especially critical values like GCS, are within plausible clinical ranges to prevent data entry errors from affecting predictions.
 3. **Incorporation of Dynamic Monitoring Variables:** Consider adding variables that offer real-time insights into patient status, such as continuous end-tidal CO2 monitoring, which could provide a more dynamic assessment of respiratory function post-extubation.
 
-These targeted improvements could enhance the model’s reliability and its integration into the clinical workflow, ensuring better patient outcomes in critical care scenarios."
+These targeted improvements could enhance the model’s reliability and its integration into the clinical workflow, ensuring better patient outcomes in critical care scenarios.
+
+# Test31
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE              | HR              | RR              | PiMAX          | COPD          | PCO2  | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-----------------|-----------------|-----------------|----------------|---------------|-------|--------------|---------------|---------------|---------------------|
+| 3       | Male (-0.30434704)| 82 (0.004366546) | 178 (-0.5709292) | 19 (0.2594606)  | 38 (-0.46288747)| 6 (-0.6510119) | 96 (-2.0156622) | 40 (-0.054151382)| 83.42307692 (-2.3026862)| 435.7142857 (-0.22914724) | 8.328571429 (0.13763262) | 89.61538462 (0.34156337)| 19.45454545 (-0.4547023)| 14.14285714 (0.30339894) | 0 (0.020836094)| NA (0.6546229)| 0            | 0.9987527     | 0.0012472953  | 1                     |
+
+## Output
 "Based on the provided data and the principles outlined in the System Prompt, let's go through each step to interpret the results of the pretrained XGBoost model and discuss the patient's extubation process.
 
 **Step 1 - Identify Top Three Risk Factors**
@@ -1055,6 +1337,15 @@ To improve the model’s predictive performance, consider the following:
    Include variables like the Rapid Shallow Breathing Index (RSBI), work of breathing, and the presence of cough or gag reflex, which are clinically relevant for assessing readiness for extubation and might enhance the model’s predictive accuracy.
 
 By addressing these points, the model can be refined to provide more reliable predictions that are aligned with clinical expectations and realities."
+
+# Test32
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE              | HR              | RR              | PiMAX          | COPD          | PCO2  | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-----------------|-----------------|-----------------|----------------|---------------|-------|--------------|---------------|---------------|---------------------|
+| 6       | Male (-0.30242297)| 75 (0.21809085)  | 168 (0.34463513) | 40 (-0.05247942)| 28 (0.8097854)  | 1 (0.7636069)  | 92 (-1.6970874) | 60 (1.6549735) | 83.33333333 (-2.5700214)| 489.1666667 (0.5233784)  | 10.23333333 (-0.19966298)| 75.29166667 (0.47952798)| 19.89655172 (-0.82300913)| 27.16666667 (-1.0847334) | 0 (0.033162482)| NA (1.3766835)| 0            | 0.86846554    | 0.13153443    | 1                     |
+
+## Output
 "To provide a comprehensive interpretation of the patient's data for extubation decision-making, let's follow the structured approach:
 
 **Step 1 - Review the provided patient information and identify the top three risk factors for extubation**
@@ -1109,6 +1400,15 @@ To improve the model:
 5. **Include Additional Clinical Metrics**: Consider variables like the Respiratory Rate to Tidal Volume ratio (RSBI) or the use of muscle relaxants or sedatives, which could influence the patient’s ability to maintain spontaneous breathing after extubation. 
 
 These steps should enhance the model's predictive performance and reliability in a clinical setting."
+
+# Test33
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE          | HR              | RR              | PiMAX          | COPD          | PCO2  | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-------------|-----------------|-----------------|----------------|---------------|-------|--------------|---------------|---------------|---------------------|
+| 7       | Male (-0.37097025)| 65 (-1.5891318)  | 183 (-0.4168232) | 31 (-0.16797327)| 36 (-0.036044076)| 1 (0.26134613) | 100 (-0.38961542)| 50 (-0.038691033)| 92.33333333 (-2.7145507)| 556.5882353 (-0.19666666) | 10.0125 (-0.22834612)   | 88.91666667 (0.4840156) | 18 (0.39566633)  | 12 (-0.12813012) | 0 (0.031931143)| NA (0.6142779)| 0            | 0.9971329     | 0.0028670754  | 1                     |
+
+## Output
 "Based on the provided patient data and using the SHAP values to identify the most significant risk factors, let's proceed with the interpretation of the XGBoost model's output regarding the patient's extubation outcome.
 
 **Step 1 - Identify Top Three Risk Factors**
@@ -1159,6 +1459,15 @@ To improve the model's predictive performance, consider the following suggestion
 4. **Additional Variables**: Consider adding variables like fluid balance, sedation levels, and recent trends in respiratory mechanics (like RSBI - Rapid Shallow Breathing Index) to give the model a more comprehensive view of the patient’s status.
 
 By addressing these areas, the model can be refined to provide more reliable predictions that align with clinical assessments and outcomes."
+
+# Test34
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE              | HR              | RR              | PiMAX          | COPD          | PCO2  | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-----------------|-----------------|-----------------|----------------|---------------|-------|--------------|---------------|---------------|---------------------|
+| 10      | Male (-0.047547832)| 43 (0.24481425)  | 183 (-0.6639815) | 17 (0.09326209) | 33 (0.2001578)  | 1 (0.8224108)  | 96 (-1.7114307) | 50 (0.022762008)| 97.46428571 (-4.0781446)| 491.8666667 (0.32024628) | 11.11666667 (-0.699785) | 81.74074074 (-0.00812174)| 26.93939394 (-0.18703099)| 18.5 (0.4658069) | 0 (0.058203243)| NA (0.7932606)| 0            | 0.99678594    | 0.0032140543  | 1                     |
+
+## Output
 "Let's interpret the patient data and model predictions based on the provided information and guidelines.
 
 **Step 1 - Identify Top Three Risk Factors**
@@ -1240,6 +1549,15 @@ The model's prediction does not match the actual outcome. The primary discrepanc
 - **Reassess feature impact**: Re-evaluating the model with a focus on clinical prioritization of features could help. For instance, emphasizing GCS and perhaps deprioritizing the less clinically impactful parameters under normal ranges.
 - **Clinical trial or cohort study**: A model validation using a different patient cohort or prospective trial could refine its predictive capabilities, particularly for edge cases like very low GCS.
 - **Additional Variables**: Consider additional variables like RSBI (Rapid Shallow Breathing Index), and the change in respiratory parameters over time, to get a dynamic sense of the patient's condition."
+
+# Test35
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE  | HR              | RR              | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-----|-----------------|-----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 43      | Female (0.5152943) | 46 (-0.2877735)  | 168 (0.9831018)  | 44 (-0.32758433)| 35 (-0.06985234)| 1 (0.6924644)  | 100 (-0.6319072)| 50 (0.22100116) | 68.16 (1.3340149) | 650.2142857 (-0.7097304)| 17.1 (0.22547601)| 114.08 (-0.39539555)| 23.5862069 (-1.1648353)| 28.14285714 (-1.2016329) | 0 (0.04200677) | NA (0.57816726)| 0            | 0.8262202     | 0.1737798     | 1                     |
+
+## Output
 "Let's proceed step by step as per the guidelines provided in the System Prompt.
 
 ### Step 1: Identify Top Three Risk Factors for Extubation
@@ -1292,7 +1610,16 @@ Given that the actual result was an extubation failure but the model predicted a
    - **Neuromuscular Function:** Assessing the patient's ability to cough and clear secretions could be crucial.
 
 By addressing these aspects, the model can be refined to better predict extubation outcomes tailored to individual patient profiles and clinical settings."
-"### Step 1 - Identify Top Three Risk Factors for Extubation
+
+# Test36
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT     | VE          | HR              | RR  | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|--------|-------------|-----------------|-----|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 44      | Male (-0.43571857)| 70 (-0.029087758)| 175 (-0.2165055) | 43 (-0.21251354)| 46 (-0.35609224)| 6 (-0.44753772)| 100 (-0.00069883396)| 40 (-0.14480616)| 84.96 (-2.819791) | 628.25 (-2.0665112) | 7.933333333 (0.004332423)| 85.08 (0.31150118) | 13 (1.0905455) | 17.57142857 (0.036257766) | 0 (0.06633663) | NA (1.6762017)| 0            | 0.9926522     | 0.0073478296  | 1                     |
+
+## Output
+### Step 1 - Identify Top Three Risk Factors for Extubation
 
 To determine the top three risk factors for extubation, we'll consider the SHAP values provided in the subject's data:
 
@@ -1340,6 +1667,15 @@ The model's failure seems rooted in not adequately weighing the severely low GCS
 4. **Additional Variables**: Consider additional variables like the Rapid Shallow Breathing Index (RSBI) or peak inspiratory pressure over time, which could give more context to respiratory muscle strength and fatigue.
 
 By addressing these points, the model can be refined to improve its predictive performance for extubation outcomes, especially in patients with complex conditions."
+
+# Test37
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE  | HR              | RR              | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-----|-----------------|-----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 55      | Female (0.96944076)| 76 (0.20583585)  | 165 (0.22280471) | 55 (-0.34655628)| 51 (-0.12424677)| 6 (-0.5329105) | 100 (-0.4977632)| 50 (0.038285073)| 75.20833333 (-0.9891667)| 677.9166667 (-1.409859)| 8.035 (-0.18261714)| 87.95833333 (1.0467913)| 15.42857143 (1.2276372)| 11.5 (-0.4700817) | 1 (-0.11446706)| NA (1.7548283)| 0            | 0.637362      | 0.36263803    | 1                     |
+
+## Output
 "Based on the given patient data and following the system prompt instructions, here's the interpretation for each step:
 
 ### Step 1: Identify Top Three Risk Factors for Extubation
@@ -1393,6 +1729,16 @@ To improve the model's predictive performance:
 4. **Model Retraining:** Use a broader dataset that includes more cases with borderline and extreme values to better train the model across a wider range of clinical scenarios.
 
 By addressing these points, the model could potentially offer more reliable predictions tailored to the nuanced needs of critical care patients."
+
+
+# Test38
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE              | HR              | RR              | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-----------------|-----------------|-----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 62      | Male (-0.39530787)| 70 (-0.8567225)  | 178 (-0.92400557)| 20 (0.38148555) | 23 (0.18702137) | 6 (-0.6692246) | 97 (-1.3427291) | 50 (-0.08859144)| 82.48 (-2.6086445)| 492.5833333 (1.0133603) | 10.98 (-0.44689727)| 57.25 (0.0123293325)| 19.37931034 (-0.44364458)| 10.66666667 (0.50104666) | 0 (0.029936591)| NA (1.5155705)| 0            | 0.99591726    | 0.004082717   | 1                     |
+
+## Output
 "Based on the provided patient data and the SHAP values, let's proceed with the interpretation as per the given steps.
 
 ### Step 1 - Top Three Risk Factors for Extubation
@@ -1454,6 +1800,15 @@ The main discrepancy is between the model's prediction of success and the actual
    - Use clinical trials or retrospective analyses to refine the model based on outcomes from a broader patient population.
 
 By addressing these points, the predictive model can be significantly improved to better align with the complex dynamics of extubation in critical care."
+
+# Test39
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE  | HR              | RR              | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-----|-----------------|-----------------|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 74      | Male (-0.2330575) | 68 (-0.30271795) | 188 (-1.029273)  | 34 (-0.3650578) | 35 (-0.16784683)| 4 (0.84678537) | 97 (-0.7520161) | 100 (0.54017776)| 69.24324324 (1.619278)| 598.3333333 (-0.36861414)| 12.4 (0.15912268)| 103.6216216 (-0.58755314)| 20.2195122 (-0.42918473)| 14 (-0.2835748) | 1 (-0.09225132)| NA (0.6307344)| 0            | 0.8981591    | 0.1018409    | 1                     |
+
+## Output
 "Based on the data and criteria provided, let's proceed with the interpretation for the patient's extubation consideration.
 
 **Step 1 - Review the provided patient information and identify the top three risk factors for extubation.**
@@ -1511,6 +1866,15 @@ To improve the model's prediction accuracy for extubation outcomes, consider the
 5. **Model Calibration**: Perform probability calibration to adjust the confidence of the model's predictions, particularly in borderline cases where clinical judgment is challenging.
 
 By refining these aspects, the model could better reflect the complex clinical realities faced during extubation decision-making."
+
+# Test40
+
+## Input
+| Data no | Gender           | Age              | Height           | SAPS-II         | OASIS           | GCS            | SpO2            | FiO2           | MBP              | VT              | VE              | HR              | RR  | PiMAX          | COPD          | PCO2 | Pred XGBoost | Prob XGB(0)   | Prob XGB(1)   | Extubation Failure |
+|---------|------------------|------------------|------------------|-----------------|-----------------|----------------|-----------------|----------------|------------------|-----------------|-----------------|-----------------|-----|----------------|---------------|------|--------------|---------------|---------------|---------------------|
+| 100     | Female (0.8716933)| 44 (0.65358144)  | 157 (-0.29718852)| 25 (0.7794346)  | 27 (0.63070923) | 1 (0.60358745) | 100 (-0.47174975)| 50 (0.12468485) | 80.78947368 (-2.3559043)| 441.6666667 (-0.42842856)| 8.866666667 (1.1762068) | 89.23333333 (0.2259084)| 18 (0.3293083) | 25.83333333 (-0.68805647) | 1 (-0.5537527) | NA (0.52483875)| 0            | 0.5589775     | 0.44102255    | 1                     |
+
+## Output
 "To interpret the patient data and analyze the XGBoost model's predictions regarding extubation outcomes, we will follow the structured steps provided in the prompt.
 
 ### Step 1: Identify the Top Three Risk Factors for Extubation
