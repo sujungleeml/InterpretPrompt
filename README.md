@@ -18,7 +18,7 @@ Extubation failure는 48시간 이내 재삽관으로 정의하고 있으며, Ex
 - #### Input Data
     케이스 번호, 케이스 별 각 변수의 값, 각 변수의 SHAP 값, 모델의 binary 예측 값과 probability, 실제 값(extubation failure여부)
 - #### LLM Output
-    Step 1,2,3으로 나누어 있음
+    Step 1,2,3으로 구성되어 있음. 각 step별 output은 다음과 같음
     * Step 1 : SHAP 값 기준으로 모델의 예측에 가장 크게 영향을 끼친 변수와 변수에 대한 해석 (의학적 설명) 제공.
     * Step 2 : 모델의 binary 예측값과 실제 값(extubation failure 여부)를 비교하여. 판정에 위험이 될 만한 변수에 대한 설명 제공. 이때 모델이 맞춘 경우와 맞추지 못한 경우에 따라 적절한 설명을 제공
     * Step 3 : Step2의 결과를 참고하여 clinical plan 제공.
