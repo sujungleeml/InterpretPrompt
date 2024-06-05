@@ -3,7 +3,7 @@
 ## 평가 가이드라인
 
 본 가이드라인은 extubation 데이터를 활용한 기계학습 모델(Xgboost) 예측 값과 SHAP 값을 바탕으로 거대언어모델(LLM)이 설명력을 증강시킬 수 있는지 탐색하고자 합니다. 여러분은 LLM Output 의 답변이 이 기계학습 모델을 이해하고 활용하는데 유용성(helpfulness)와 안전성(Safety)의 측면에서 적합한지 알아보기 위한 설문을 작성할 것입니다.
-Confusion matrix 분류에 따른 TP(True positive), TN(True Negative), FP(False Positive), FN(False Negative)케이스에 대해 각 10개씩 총 40개의 케이스에 대해 아래 작업을 반복합니다.
+Confusion matrix 분류에 따른 TP(True positive), TN(True Negative), FP(False Positive), FN(False Negative)케이스에 대해 각 10개씩 총 40개의 케이스에 대해 아래 작업순서를 반복합니다.
 
 Extubation failure는 48시간 이내 재삽관으로 정의하고 있으며, Extubation failure인 경우를 1, Extubation success인 경우를 0으로 나타냅니다.
 
