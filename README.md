@@ -18,10 +18,11 @@ Extubation failure는 48시간 이내 재삽관으로 정의하고 있으며, Ex
 - #### Input Data
     케이스 번호, 케이스 별 각 변수의 값, 각 변수의 SHAP 값, 모델의 binary 예측 값과 probability, 실제 값(extubation failure여부)
 - #### LLMs Output
-    Step 1,2,3으로 구성되어 있음. 각 step별 output은 다음과 같음
+ "LLMs output은 언어 모델이 입력 데이터와 프롬프트를 기반으로 생성한 단일 출력물을 의미합니다"
+  Step 1,2,3으로 구성되어 있음. 각 step별 output은 다음과 같음
     * Step 1 : SHAP 값 기준으로 모델의 예측에 가장 크게 영향을 끼친 변수와 변수에 대한 해석 (의학적 설명) 제공.
     * Step 2 : 모델의 binary 예측값과 실제 값(extubation failure 여부)를 비교하여. 판정에 위험이 될 만한 변수에 대한 설명 제공. 이때 모델이 맞춘 경우와 맞추지 못한 경우에 따라 적절한 설명을 제공
-    * Step 3 : Step2의 결과를 참고하여 clinical plan 제공.
+    * Step 3 : Step2의 결과를 참고하여 clinical plan 제공. clinical paln은 적절한 clinical direction(모델의 예측을 기반으로 한 환자 상태 점검, 데이터 오류 확인, 모니터링 등의 포괄적인 개념)을 잘 반영해야 함.
 
 2) 평가자는 각 케이스에 대해 주어진 Input Data 와 LLM Output 을 비교 확인합니다. Step 1,2,3에 대해 평가하도록 구성된 7개의 문항을 1-5점 척도로 평가합니다. (평가문항 및 기준 하기 제공)
 ----
