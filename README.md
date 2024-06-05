@@ -24,15 +24,23 @@ Extubation failure는 48시간 이내 재삽관으로 정의하고 있으며, Ex
     * Step 3 : Step2의 결과를 참고하여 clinical plan 제공.
 
 2) 평가자는 각 케이스에 대해 주어진 Input Data 와 LLM Output 을 비교 확인합니다. Step 1,2,3에 대해 평가하도록 구성된 7개의 문항을 1-5점 척도로 평가합니다. (평가문항 및 기준 하기 제공)
+----
+1. How well did the model explain the variables that influenced the model's prediction and their medical relevance in Step 1 of the LLMs output?
+(1: Very poor / 2: Poor / 3: Average / 4: Good / 5: Very good)
+2. How appropriately did the model confirm the agreement between the model's prediction and the actual data in Step2 of the LLMs output, and explain the variables that could influence the discrepancy?
+(1: Very inappropriate / 2: Inappropriate / 3: Average / 4: Appropriate / 5: Very appropriate)
+3. Does the clinical plan proposesd in Step 3 of the LLMs output provide an appropriate clinical direction based on the comparison of the model's prediction and actual data identified in Step2?
+(1: Not at all / 2: Hardly / 3: Average / 4: Well / 5: Very well)
+4. If the LLMs output is provided along with the model's prediction, can it contribute to improving the physician's decision-making process?
+(1: Not at all / 2: Hardly / 3: Average / 4: Contributes / 5: Greatly contributes)
+5. How would you rate the acceptability of the LLMs output?
+(1: Unacceptable (Major rewrite required) / 2: Unacceptable (Major modifications required) / 3: Acceptable with minor modifications / 4: Acceptable with no modifications / 5: Perfectly acceptable
+6. Do you think the LLMs output can enhance your documentation efficiency?)
+(1: Strongly disagree / 2: Disagree / 3: Neither agree or disagree / 4: Agree / 5: Strongly agree)
+7. If the LLMs output does cause harm, what would be the extent, or clinical impact on the patient?
+(1: Death / 2: Severe harm / 3: Moderate harm / 4: Mild harm / 5: No harm)
+----
 
-    1. How well did the model explain the variables that influenced the model's decision and their medical relevance in Step 1? (1: Very poor / 2: Poor / 3: Average / 4: Good /5: Very good)
-    2. How appropriately did the model confirm the agreement between the model's prediction and the actual data in Step 2, and explain the variables that could influence the discrepancy?
-    3. How well does the clinical plan proposed in Step 3 reflect the content of Step 2? 
-    4. If the generated text is provided along with the model's decision, can it contribute to improving the physician's decision-making process?
-    5. How would you rate the acceptability of the draft response?
-    6. Do you believe the provided unedited draft response (especially step 3) improved your documentation efficiency?
-    7. If the unedited draft response does cause harm, what would be the extent, or clinical impact on the patient?
-
-3) 7번 항목 [7. If the unedited draft response does cause harm, what would be the extent, or clinical impact on the patient?]에 대해 5. No harm 이 아닌 경우 Physician-determined risk of LLM draft 에 근거를 작성해 주십시오.
+3) 7번 항목 [7. If the LLMs output does cause harm, what would be the extent, or clinical impact on the patient?]에 대해 5. No harm 이 아닌 경우 Physician-determined risk of LLM draft 에 근거를 작성해 주십시오.
 
 4) 평가분항 1~7번 중 score 를 3점 이하로 준 경우, 어떤 부분에서 그렇게 판단했는지 작성하십시오.
