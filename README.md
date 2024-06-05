@@ -29,7 +29,7 @@ Extubation failure는 48시간 이내 재삽관으로 정의하고 있으며, Ex
 (1: Very poor / 2: Poor / 3: Average / 4: Good / 5: Very good)
 2. How appropriately did the model confirm the agreement between the model's prediction and the actual data in Step2 of the LLMs output, and explain the variables that could influence the discrepancy?
 (1: Very inappropriate / 2: Inappropriate / 3: Average / 4: Appropriate / 5: Very appropriate)
-3. Does the clinical plan proposesd in Step 3 of the LLMs output provide an appropriate clinical direction based on the comparison of the model's prediction and actual data identified in Step2?
+3. Does the clinical plan proposed in Step 3 of the LLMs output provide an appropriate clinical direction based on the comparison of the model's prediction and actual data identified in Step2?
 (1: Not at all / 2: Hardly / 3: Average / 4: Well / 5: Very well)
 4. If the LLMs output is provided along with the model's prediction, can it contribute to improving the physician's decision-making process?
 (1: Not at all / 2: Hardly / 3: Average / 4: Contributes / 5: Greatly contributes)
