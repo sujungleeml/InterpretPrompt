@@ -18,7 +18,7 @@ Extubation failure는 48시간 이내 재삽관으로 정의하고 있으며, Ex
 - #### Input Data
     케이스 번호, 케이스 별 각 변수의 값, 각 변수의 SHAP 값, 모델의 binary 예측 값과 probability, 실제 값(extubation failure여부)로 구성되어 있음.
     임상변수들은 모델의 학습 데이터와 맞춰주기 위해 24시간 평균 또는 가장 최근 값으로 조정되었으며, 결측값이 포함될 수 있음. 이는 실제 임상 상황을 반영한 것으로, 값이 없는 것 자체는 문제점으로 평가하지 않음. (만약 추가적으로 변수 설명이 필요한 경우 요청해 주시면 자료를 전달해 드리겠습니다.)
-- #### LLMs Output
+- #### LLM Output
     LLMs output은 언어 모델이 입력 데이터와 프롬프트를 기반으로 생성한 단일 출력물을 의미함.
     LLMs output은 Step 1,2,3으로 구성되어 있음. 각 step별 output은 다음과 같음
     * Step 1 : SHAP 값 기준으로 모델의 예측에 가장 크게 영향을 끼친 변수와 변수에 대한 해석 (의학적 설명) 제공.
@@ -27,19 +27,19 @@ Extubation failure는 48시간 이내 재삽관으로 정의하고 있으며, Ex
 
 2) 평가자는 각 케이스에 대해 주어진 Input Data 와 LLM Output 을 비교 확인합니다. Step 1,2,3에 대해 평가하도록 구성된 7개의 문항을 1-5점 척도로 평가합니다. (평가문항 및 기준 하기 제공)
 ----
-1. How well did the model explain the variables that influenced the model's prediction and their medical relevance in Step 1 of the LLMs output?
+1. How well does the LLM output explain the variables that influenced the model's prediction and their medical relevance in Step 1?
 (1: Very poor / 2: Poor / 3: Average / 4: Good / 5: Very good)
-2. How appropriately did the model confirm the agreement between the model's prediction and the actual data in Step2 of the LLMs output, and explain the variables that could influence the discrepancy?
+2. How appropriately does the LLM output confirm the agreement between the model's prediction and the actual data in Step2, and explain the variables that could influence the discrepancy in the case of disagreement?
 (1: Very inappropriate / 2: Inappropriate / 3: Average / 4: Appropriate / 5: Very appropriate)
-3. Does the clinical plan proposed in Step 3 of the LLMs output provide an appropriate clinical direction based on the comparison of the model's prediction and actual data identified in Step2?
-(1: Not at all / 2: Hardly / 3: Average / 4: Well / 5: Very well)
-4. If the LLMs output is provided along with the model's prediction, can it contribute to improving the physician's decision-making process?
+3. Does the clinical plan proposed in Step 3 provide an appropriate clinical direction based on the comparison of the model's prediction and actual data identified in Step2?
+(1: Very inappropriate / 2: Inappropriate / 3: Average / 4: Appropriate / 5: Very appropriate)
+4. If the LLM output is provided along with the model's prediction, would it contribute to improving the physician's decision-making process?
 (1: Not at all / 2: Hardly / 3: Average / 4: Contributes / 5: Greatly contributes)
-5. How would you rate the acceptability of the LLMs output?
+5. How would you rate the acceptability of the LLM output?
 (1: Unacceptable (Major rewrite required) / 2: Unacceptable (Major modifications required) / 3: Acceptable with minor modifications / 4: Acceptable with no modifications / 5: Perfectly acceptable
-6. Do you think the LLMs output can enhance your documentation efficiency?)
+6. Do you think the LLM output can enhance your documentation efficiency?)
 (1: Strongly disagree / 2: Disagree / 3: Neither agree or disagree / 4: Agree / 5: Strongly agree)
-7. If the LLMs output does cause harm, what would be the extent, or clinical impact on the patient?
+7. If the LLM output does cause harm, what would be its extent, or clinical impact on the patient?
 (1: Death / 2: Severe harm / 3: Moderate harm / 4: Mild harm / 5: No harm)
 ----
 
