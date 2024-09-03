@@ -1,4 +1,4 @@
-# Test_templates
+# Interpret Prompt Test
 
 ## 평가 가이드라인
 
